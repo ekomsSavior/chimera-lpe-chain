@@ -10,7 +10,7 @@ order for a complete low-privilege → root escalation chain.
 Every exploit compiles clean with `-Wall -Werror` and was written against
 the actual kernel 6.19.x source code.
 
-> Disclaimer: for authorized security testing only.
+> **Disclaimer:** for authorized security testing only.
 
 ## Quick Start
 
