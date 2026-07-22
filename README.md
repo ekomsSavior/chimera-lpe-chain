@@ -10,26 +10,6 @@ order for a complete low-privilege → root escalation chain.
 Every exploit compiles clean with `-Wall -Werror` and was written against
 the actual kernel 6.19.x source code.
 
-## Repository Structure
-
-```
-chimera/
-├── chain.c              ← Orchestrator (run them all or pick phases)
-├── chain                ← Compiled binary
-├── CHAIN.md             ← This file
-├── LICENSE              ← MIT
-├── build.sh             ← Build everything
-└── exploits/
-    ├── cve-2026-53359.c ← KVM shadow paging UAF — highest value
-    ├── cve-2026-53341.c ← fhandle UAF / KASLR leak
-    ├── cve-2026-53362.c ← IPv6 fragment gap heap overflow
-    ├── cve-2026-53374.c ← amdgpu GART physical memory leak
-    ├── cve-2026-53389.c ← TCP-AO key use-after-free
-    ├── cve-2026-53354.c ← arm64 TLBI stale TLB entries (silicon errata)
-    └── tools/
-        └── detect.py    ← BPF-based detection for blue team
-```
-
 ## Quick Start
 
 ```bash
